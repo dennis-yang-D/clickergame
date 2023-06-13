@@ -12,7 +12,12 @@ function baseClick(){
     document.getElementById("showPoints").innerHTML = points
 }
 function upgradeClick(){
-    clickUpgradeCostNum = clickUpgradeCostNum + 0.5 * clickUpgradeCostNum
-    pointsPerClick = pointsPerClick + 1
-    document.getElementById("clickUpgradeCost").innerHTML = clickUpgradeCostNum
+    if(points >= clickUpgradeCostNum)
+    {
+        points = points - clickUpgradeCostNum
+        clickUpgradeCostNum = clickUpgradeCostNum + 0.5 * clickUpgradeCostNum
+        pointsPerClick = pointsPerClick + 1
+        document.getElementById("clickUpgradeCost").innerHTML = clickUpgradeCostNum
+        document.getElementById("showPoints").innerHTML = points
+    }
 }
