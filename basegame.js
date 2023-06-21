@@ -10,6 +10,8 @@ document.getElementById("clickUpgradeCost").innerHTML = clickUpgradeCostNum
 document.getElementById('upgradeButton').addEventListener("click", upgradeClick)
 document.getElementById("clickUpgradeCost2").innerHTML = clickUpgradeCostNum2
 document.getElementById('upgradeButton2').addEventListener("click", upgradeClick2)
+document.getElementById("clickUpgradeCost3").innerHTML = clickUpgradeCostNum3
+document.getElementById('upgradeButton3').addEventListener("click", upgradeClick3)
 
 function roundVals()
 {
