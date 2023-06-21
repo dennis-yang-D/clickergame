@@ -1,7 +1,8 @@
-var points = 0;
-var pointsPerClick = 1;
-var clickUpgradeCostNum = 10;
-var clickUpgradeCostNum2 = 80;
+var points = 0
+var pointsPerClick = 1
+var clickUpgradeCostNum = 10
+var clickUpgradeCostNum2 = 80
+var clickUpgradeCostNum3 = 500
 
 document.getElementById("showPoints").innerHTML = points
 document.getElementById('clickingButton').addEventListener("click", baseClick)
@@ -10,11 +11,6 @@ document.getElementById('upgradeButton').addEventListener("click", upgradeClick)
 document.getElementById("clickUpgradeCost2").innerHTML = clickUpgradeCostNum2
 document.getElementById('upgradeButton2').addEventListener("click", upgradeClick2)
 
-function baseClick(){
-    points += pointsPerClick
-    roundVals()
-    document.getElementById("showPoints").innerHTML = points
-}
 function roundVals()
 {
     points = Math.round(100*points)/100
@@ -22,6 +18,11 @@ function roundVals()
     clickUpgradeCostNum = Math.round(100*clickUpgradeCostNum)/100
     clickUpgradeCostNum2 = Math.round(100*clickUpgradeCostNum2)/100
     clickUpgradeCostNum3 = Math.round(100*clickUpgradeCostNum3)/100
+}
+function baseClick(){
+    points += pointsPerClick
+    roundVals()
+    document.getElementById("showPoints").innerHTML = points
 }
 function upgradeClick(){
     if(points >= clickUpgradeCostNum)
