@@ -20,7 +20,7 @@ document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
 document.getElementById('clickingButton').addEventListener("click", baseClick)
 
 document.getElementById("clickUpgradeCost1").innerHTML = clickUpgradeCosts[0]
-document.getElementById('upgradeButton').addEventListener("click", upgradeX(1))
+document.getElementById('upgradeButton1').addEventListener("click", upgradeX(1))
 document.getElementById("clickUpgradeCost2").innerHTML = clickUpgradeCosts[1]
 document.getElementById('upgradeButton2').addEventListener("click", upgradeX(2))
 document.getElementById("clickUpgradeCost3").innerHTML = clickUpgradeCosts[2]
