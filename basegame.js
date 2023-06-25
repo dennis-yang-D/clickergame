@@ -5,6 +5,7 @@ var clickUpgradeCostNum2 = 80
 var clickUpgradeCostNum3 = 500
 
 var prestigeBonus1 = 1
+var prestigeMachines = 0
 var prestigeBonusCost1 = 1000
 
 var totalPointsPerClick = 1
@@ -20,6 +21,9 @@ document.getElementById("clickUpgradeCost3").innerHTML = clickUpgradeCostNum3
 document.getElementById('upgradeButton3').addEventListener("click", upgradeClick3)
 document.getElementById("prestigeCost1").innerHTML = prestigeBonusCost1
 document.getElementById('prestigeButton1').addEventListener("click", prestige1)
+
+document.getElementById("numPrestigeMachines").innerHTML = prestigeMachines
+document.getElementById("currentPrestigeBoost").innerHTML = prestigeBonus1
 
 function roundVals()
 {
@@ -48,7 +52,7 @@ function resetPrices()
 } */
 
 function baseClick(){
-    points += pointsPerClick
+    points += totalPointsPerClick
     roundVals()
     document.getElementById("showPoints").innerHTML = points
 }
@@ -85,17 +89,6 @@ function upgradeClick3(){
         document.getElementById("showPoints").innerHTML = points
     }
 }
-function upgradeClick3(){
-    if(points >= clickUpgradeCostNum3)
-    {
-        points = points - clickUpgradeCostNum3
-        clickUpgradeCostNum3 = clickUpgradeCostNum2 + 1 * clickUpgradeCostNum3
-        pointsPerClick = pointsPerClick + 10
-        roundVals()
-        document.getElementById("clickUpgradeCost3").innerHTML = clickUpgradeCostNum3
-        document.getElementById("showPoints").innerHTML = points
-    }
-}
 function prestige1(){
     if(points >= prestigeBonusCost1)
     {
@@ -103,8 +96,13 @@ function prestige1(){
         prestigeBonusCost1 = prestigeBonusCost1 + 99 * prestigeBonusCost1
         pointsPerClick = 1
         prestigeBonus1 = prestigeBonus1 * 2
+        prestigeMachines = prestigeMachines + 1
         roundVals()
         resetPrices()
+        document.getElementById("prestigeCost1").innerHTML = prestigeBonusCost1
         document.getElementById("showPoints").innerHTML = points
+
+        document.getElementById("numPrestigeMachines").innerHTML = prestigeMachines
+        document.getElementById("currentPrestigeBoost").innerHTML = prestigeBonus1
     }
 }
