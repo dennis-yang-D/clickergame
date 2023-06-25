@@ -18,15 +18,15 @@ var totalPointsPerClick = 1
 document.getElementById("showPoints").innerHTML = points
 document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
 document.getElementById('clickingButton').addEventListener("click", baseClick)
-document.getElementById("clickUpgradeCost").innerHTML = clickUpgradeCosts[1]
+document.getElementById("clickUpgradeCost").innerHTML = clickUpgradeCosts[0]
 document.getElementById('upgradeButton').addEventListener("click", upgradeX(1))
-document.getElementById("clickUpgradeCost2").innerHTML = clickUpgradeCosts[2]
+document.getElementById("clickUpgradeCost2").innerHTML = clickUpgradeCosts[1]
 document.getElementById('upgradeButton2').addEventListener("click", upgradeX(2))
-document.getElementById("clickUpgradeCost3").innerHTML = clickUpgradeCosts[3]
+document.getElementById("clickUpgradeCost3").innerHTML = clickUpgradeCosts[2]
 document.getElementById('upgradeButton3').addEventListener("click", upgradeX(3))
-document.getElementById("clickUpgradeCost4").innerHTML = clickUpgradeCosts[4]
+document.getElementById("clickUpgradeCost4").innerHTML = clickUpgradeCosts[3]
 document.getElementById('upgradeButton4').addEventListener("click", upgradeX(4))
-document.getElementById("clickUpgradeCost5").innerHTML = clickUpgradeCosts[5]
+document.getElementById("clickUpgradeCost5").innerHTML = clickUpgradeCosts[4]
 document.getElementById('upgradeButton5').addEventListener("click", upgradeX(5))
 
 document.getElementById("prestigeCost1").innerHTML = prestigeBonusCost1
