@@ -10,6 +10,7 @@ var prestigeBonusCost1 = 1000
 var totalPointsPerClick = 1
 
 document.getElementById("showPoints").innerHTML = points
+document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
 document.getElementById('clickingButton').addEventListener("click", baseClick)
 document.getElementById("clickUpgradeCost").innerHTML = clickUpgradeCostNum
 document.getElementById('upgradeButton').addEventListener("click", upgradeClick)
@@ -28,12 +29,17 @@ function roundVals()
     clickUpgradeCostNum = Math.round(100*clickUpgradeCostNum)/100
     clickUpgradeCostNum2 = Math.round(100*clickUpgradeCostNum2)/100
     clickUpgradeCostNum3 = Math.round(100*clickUpgradeCostNum3)/100
+    document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
 }
 function resetPrices()
 {
     clickUpgradeCostNum = 10
     clickUpgradeCostNum2 = 80
     clickUpgradeCostNum3 = 500
+
+    document.getElementById("clickUpgradeCost").innerHTML = clickUpgradeCostNum
+    document.getElementById("clickUpgradeCost2").innerHTML = clickUpgradeCostNum2
+    document.getElementById("clickUpgradeCost3").innerHTML = clickUpgradeCostNum3
 }
 /* function prestigeText(showText,buttonID,textID)
 {
@@ -96,10 +102,9 @@ function prestige1(){
         points = 0
         prestigeBonusCost1 = prestigeBonusCost1 + 99 * prestigeBonusCost1
         pointsPerClick = 1
-        resetPrices()
         prestigeBonus1 = prestigeBonus1 * 2
         roundVals()
-        document.getElementById("clickUpgradeCost3").innerHTML = prestigeBonusCost1
+        resetPrices()
         document.getElementById("showPoints").innerHTML = points
     }
 }
