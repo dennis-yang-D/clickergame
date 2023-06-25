@@ -8,6 +8,7 @@ var clickUpgradeCostNum5 = 100000
 
 const clickUpgradeCosts = [10,80,500,25000,100000];
 const clickUpgradeBoosts = [1,5,10,50,100];
+const clickUpgradeCostInc = [0.4,0.8,1,2,3.5]
 
 var prestigeBonus1 = 1
 var prestigeMachines = 0
@@ -20,15 +21,29 @@ document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
 document.getElementById('clickingButton').addEventListener("click", baseClick)
 
 document.getElementById("clickUpgradeCost1").innerHTML = clickUpgradeCosts[0]
-document.getElementById('upgradeButton1').addEventListener("click", upgradeX(1))
+document.getElementById('upgradeButton1').addEventListener("click", function() {
+  upgradeX(1);
+});
+
 document.getElementById("clickUpgradeCost2").innerHTML = clickUpgradeCosts[1]
-document.getElementById('upgradeButton2').addEventListener("click", upgradeX(2))
+document.getElementById('upgradeButton2').addEventListener("click", function() {
+  upgradeX(2);
+});
+
 document.getElementById("clickUpgradeCost3").innerHTML = clickUpgradeCosts[2]
-document.getElementById('upgradeButton3').addEventListener("click", upgradeX(3))
+document.getElementById('upgradeButton3').addEventListener("click", function() {
+  upgradeX(3);
+});
+
 document.getElementById("clickUpgradeCost4").innerHTML = clickUpgradeCosts[3]
-document.getElementById('upgradeButton4').addEventListener("click", upgradeX(4))
+document.getElementById('upgradeButton4').addEventListener("click", function() {
+  upgradeX(4);
+});
+
 document.getElementById("clickUpgradeCost5").innerHTML = clickUpgradeCosts[4]
-document.getElementById('upgradeButton5').addEventListener("click", upgradeX(5))
+document.getElementById('upgradeButton5').addEventListener("click", function() {
+  upgradeX(5);
+});
 
 document.getElementById("prestigeCost1").innerHTML = prestigeBonusCost1
 document.getElementById('prestigeButton1').addEventListener("click", prestige1)
@@ -79,7 +94,7 @@ function upgradeX(num){
     if(points >= clickUpgradeCosts[num-1])
     {
         points = points - clickUpgradeCosts[num-1]
-        clickUpgradeCosts[num-1] = clickUpgradeCosts[num-1] + 1 * clickUpgradeCosts[num-1]
+        clickUpgradeCosts[num-1] = clickUpgradeCosts[num-1] + clickUpgradeCostInc[num-1] * clickUpgradeCosts[num-1]
         pointsPerClick = pointsPerClick + clickUpgradeBoosts[num-1]
         roundVals()
         document.getElementById("clickUpgradeCost" + num).innerHTML = clickUpgradeCosts[num-1]
