@@ -71,7 +71,7 @@ function resetPrices()
     clickUpgradeCosts[3] = 25000
     clickUpgradeCosts[4] = 100000
 
-    document.getElementById("clickUpgradeCost").innerHTML = clickUpgradeCosts[0]
+    document.getElementById("clickUpgradeCost1").innerHTML = clickUpgradeCosts[0]
     document.getElementById("clickUpgradeCost2").innerHTML = clickUpgradeCosts[1]
     document.getElementById("clickUpgradeCost3").innerHTML = clickUpgradeCosts[2]
     document.getElementById("clickUpgradeCost4").innerHTML = clickUpgradeCosts[3]
@@ -90,7 +90,6 @@ function baseClick(){
 }
 
 function upgradeX(num){
-    console.log("hi");
     if(points >= clickUpgradeCosts[num-1])
     {
         points = points - clickUpgradeCosts[num-1]
