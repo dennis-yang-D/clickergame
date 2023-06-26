@@ -10,7 +10,7 @@ export let prestigeBonus1 = 1
 export let prestigeMachines = 0
 export let prestigeBonusCost1 = 1000
 
-document.getElementById("showPoints").innerHTML = points
+/*document.getElementById("showPoints").innerHTML = points
 document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
 document.getElementById('clickingButton').addEventListener("click", baseClick)
 
@@ -111,4 +111,4 @@ function prestige1(){
         document.getElementById("numPrestigeMachines").innerHTML = prestigeMachines
         document.getElementById("currentPrestigeBoost").innerHTML = prestigeBonus1
     }
-}
+}*/
