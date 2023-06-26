@@ -1,14 +1,14 @@
-export var points = 0
-export var pointsPerClick = 1
-export var totalPointsPerClick = 1
+export let points = 0
+export let pointsPerClick = 1
+export let totalPointsPerClick = 1
 
-export const clickUpgradeCosts = [10,80,500,25000,100000];
-export const clickUpgradeBoosts = [1,5,10,50,100];
-export const clickUpgradeCostInc = [0.4,0.8,1,2,3.5]
+export let clickUpgradeCosts = [10,80,500,25000,100000]
+export let clickUpgradeBoosts = [1,5,10,50,100]
+export let clickUpgradeCostInc = [0.4,0.8,1,2,3.5]
 
-export var prestigeBonus1 = 1
-export var prestigeMachines = 0
-export var prestigeBonusCost1 = 1000
+export let prestigeBonus1 = 1
+export let prestigeMachines = 0
+export let prestigeBonusCost1 = 1000
 
 document.getElementById("showPoints").innerHTML = points
 document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
