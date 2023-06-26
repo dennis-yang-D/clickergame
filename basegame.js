@@ -77,7 +77,7 @@ function resetPrices()
     document.getElementById("buttonID").innerHTML = "confirm"
 } */
 
-*/function baseClick(){
+/*function baseClick(){
     points += totalPointsPerClick
     roundVals()
     document.getElementById("showPoints").innerHTML = points
