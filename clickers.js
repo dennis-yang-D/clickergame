@@ -1,4 +1,4 @@
-import {points, pointsPerClick, totalPointsPerClick, clickUpgradeCosts, clickUpgradeBoosts, clickUpgradeCostInc, prestigeBonus1, prestigeMachines, prestigeMachines} from './basegame.js'
+import {points, pointsPerClick, totalPointsPerClick, clickUpgradeCosts, clickUpgradeBoosts, clickUpgradeCostInc, prestigeBonus1, prestigeMachines, prestigeBonusCost1} from './basegame.js'
 
 document.getElementById("showPoints").innerHTML = points
 document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
