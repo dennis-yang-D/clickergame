@@ -61,11 +61,6 @@ function resetPrices()
     document.getElementById("clickUpgradeCost4").innerHTML = clickUpgradeCosts[3]
     document.getElementById("clickUpgradeCost5").innerHTML = clickUpgradeCosts[4]
 }
-/* function prestigeText(showText,buttonID,textID)
-{
-    document.getElementById("textID").innerHTML = showText
-    document.getElementById("buttonID").innerHTML = "confirm"
-} */
 
 function baseClick(){
     points += totalPointsPerClick
@@ -88,6 +83,7 @@ function upgradeX(num){
 function prestige1(){
     if(points >= prestigeBonusCost1)
     {
+      if(confirm("Are you sure you want to prestige?")) {
         points = 0
         prestigeBonusCost1 = prestigeBonusCost1 + 99 * prestigeBonusCost1
         pointsPerClick = 1
@@ -100,5 +96,6 @@ function prestige1(){
 
         document.getElementById("numPrestigeMachines").innerHTML = prestigeMachines
         document.getElementById("currentPrestigeBoost").innerHTML = prestigeBonus1
+      }  
     }
 }
