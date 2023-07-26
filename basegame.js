@@ -1,14 +1,14 @@
-export let points = 0
-export let pointsPerClick = 1
-export let totalPointsPerClick = 1
+let points = 0
+let pointsPerClick = 1
+let totalPointsPerClick = 1
 
-export let clickUpgradeCosts = [10,80,500,25000,100000]
-export let clickUpgradeBoosts = [1,5,10,50,100]
-export let clickUpgradeCostInc = [0.4,0.8,1,2,3.5]
+let clickUpgradeCosts = [10,80,500,25000,100000]
+let clickUpgradeBoosts = [1,5,10,50,100]
+let clickUpgradeCostInc = [0.4,0.8,1,2,3.5]
 
-export let prestigeBonus1 = 1
-export let prestigeMachines = 0
-export let prestigeBonusCost1 = 1000
+let prestigeBonus1 = 1
+let prestigeMachines = 0
+let prestigeBonusCost1 = 1000
 
 document.getElementById("showPoints").innerHTML = points
 document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
@@ -98,6 +98,7 @@ function upgradeX(num){
 function prestige1(){
     if(points >= prestigeBonusCost1)
     {
+      if(confirm("Are you sure you want to prestige?")) {
         points = 0
         prestigeBonusCost1 = prestigeBonusCost1 + 99 * prestigeBonusCost1
         pointsPerClick = 1
@@ -110,5 +111,6 @@ function prestige1(){
 
         document.getElementById("numPrestigeMachines").innerHTML = prestigeMachines
         document.getElementById("currentPrestigeBoost").innerHTML = prestigeBonus1
+      }  
     }
 }
