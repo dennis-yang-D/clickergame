@@ -10,6 +10,10 @@ let prestigeBonus1 = 1
 let prestigeMachines = 0
 let prestigeBonusCost1 = 1000
 
+let automaticMachines = 0
+let automaticMachinesUnlock = false
+let automaticMachinesCost = 1000
+
 document.getElementById("showPoints").innerHTML = points
 document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
 document.getElementById('clickingButton').addEventListener("click", baseClick)
@@ -71,11 +75,6 @@ function resetPrices()
     document.getElementById("clickUpgradeCost4").innerHTML = clickUpgradeCosts[3]
     document.getElementById("clickUpgradeCost5").innerHTML = clickUpgradeCosts[4]
 }
-/* function prestigeText(showText,buttonID,textID)
-{
-    document.getElementById("textID").innerHTML = showText
-    document.getElementById("buttonID").innerHTML = "confirm"
-} */
 
 function baseClick(){
     points += totalPointsPerClick
