@@ -136,4 +136,5 @@ window.setInterval(function(){
   if(deltaTime <= 2000)
   {
     baseClick()
+  }
 },deltaTime)
