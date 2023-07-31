@@ -11,8 +11,10 @@ let prestigeMachines = 0
 let prestigeBonusCost1 = 1000
 
 let automaticMachines = 0
+let autoTimes = [2001,2000,1800,1600,1400,1200,1000,900,800,700,600,500,400,300,200,150,100,80,60,50,40,35]
 let automaticMachinesUnlock = false
 let automaticMachinesCost = 1000
+let deltaTime = 2001
 
 document.getElementById("showPoints").innerHTML = points
 document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
@@ -115,3 +117,23 @@ function prestige1(){
       }  
     }
 }
+
+function upgradeAuto(){
+    if(points >= automaticMachinesCost && automaticMachines <= autoTimes.length)
+    {
+        points = points - automaticMachinesCost
+        automaticMachinesCost = 5*automaticMachinesCost
+        automaticMachines = automaticMachines + 1
+        deltaTime = autoTimes[automaticMachines]
+        roundVals()
+        document.getElementById("autoClickCost").innerHTML = automaticMachinesCost
+        document.getElementById("showPoints").innerHTML = points
+        document.getElementById("autoSpeed").innerHTML = autoTimes[automaticMachines] = " miliseconds"
+    }
+}
+
+window.setInterval(function(){
+  if(deltaTime <= 2000)
+  {
+    baseClick()
+},deltaTime)
