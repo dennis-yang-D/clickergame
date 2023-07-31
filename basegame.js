@@ -110,6 +110,8 @@ function prestige1(){
 
         document.getElementById("numPrestigeMachines").innerHTML = prestigeMachines
         document.getElementById("currentPrestigeBoost").innerHTML = prestigeBonus1
+
+        document.getElementById("autoDisplay").style.display = 'block'
       }  
     }
 }
