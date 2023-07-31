@@ -10,3 +10,8 @@
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }
+
+/* the automation section */
+.autoDisplay {
+  display: 'none'
+}
