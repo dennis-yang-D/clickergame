@@ -16,8 +16,11 @@ let automaticMachinesUnlock = false
 let automaticMachinesCost = 1000
 let deltaTime = 2001
 
+let clicks = 0
+
 document.getElementById("showPoints").innerHTML = points
 document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
+document.getElementById("showTotalClicks").innerHTML = clicks
 document.getElementById('clickingButton').addEventListener("click", baseClick)
 
 document.getElementById("clickUpgradeCost1").innerHTML = clickUpgradeCosts[0]
@@ -82,6 +85,7 @@ function baseClick(){
     points += totalPointsPerClick
     roundVals()
     document.getElementById("showPoints").innerHTML = points
+    clicks = clicks + 1
 }
 
 function upgradeX(num){
@@ -105,10 +109,12 @@ function prestige1(){
         pointsPerClick = 1
         prestigeBonus1 = prestigeBonus1 * 2
         prestigeMachines = prestigeMachines + 1
+        clicks = 0
         roundVals()
         resetPrices()
         document.getElementById("prestigeCost1").innerHTML = prestigeBonusCost1
         document.getElementById("showPoints").innerHTML = points
+        document.getElementById("showTotalClicks").innerHTML = clicks
 
         document.getElementById("numPrestigeMachines").innerHTML = prestigeMachines
         document.getElementById("currentPrestigeBoost").innerHTML = prestigeBonus1
@@ -128,7 +134,7 @@ function upgradeAuto(){
         roundVals()
         document.getElementById("autoClickCost").innerHTML = automaticMachinesCost
         document.getElementById("showPoints").innerHTML = points
-        document.getElementById("autoSpeed").innerHTML = autoTimes[automaticMachines] = " miliseconds"
+        document.getElementById("autoSpeed").innerHTML = autoTimes[automaticMachines] + " miliseconds"
     }
 }
 
