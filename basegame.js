@@ -48,8 +48,8 @@ document.getElementById('upgradeButton5').addEventListener("click", function() {
 document.getElementById("prestigeCost1").innerHTML = prestigeBonusCost1
 document.getElementById('prestigeButton1').addEventListener("click", prestige1)
 
-document.getElementById("numPrestigeMachines").innerHTML = prestigeMachines
-document.getElementById("currentPrestigeBoost").innerHTML = prestigeBonus1
+document.getElementById("autoClickCost").innerHTML = automaticMachinesCost
+document.getElementById("autoClickButton").addEventListener("click", upgradeAuto)
 
 function roundVals()
 {
