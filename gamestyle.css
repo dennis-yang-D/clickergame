@@ -13,5 +13,5 @@
 
 /* the automation section */
 .autoDisplay {
-  display: 'none'
+  visibility: 'hidden'
 }
