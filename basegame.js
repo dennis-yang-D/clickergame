@@ -20,6 +20,7 @@ let clicks = 0
 
 document.getElementById("showPoints").innerHTML = points
 document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
+document.getElementById("showBasePointsPerClick").innerHTML = pointsPerClick
 document.getElementById("showTotalClicks").innerHTML = clicks
 document.getElementById('clickingButton').addEventListener("click", baseClick)
 
@@ -65,6 +66,8 @@ function roundVals()
     clickUpgradeCosts[3] = Math.round(100*clickUpgradeCosts[3])/100
     clickUpgradeCosts[4] = Math.round(100*clickUpgradeCosts[4])/100
     document.getElementById("showPointsPerClick").innerHTML = totalPointsPerClick
+    document.getElementById("showBasePointsPerClick").innerHTML = pointsPerClick
+    document.getElementById("showTotalClicks").innerHTML = clicks
 }
 function resetPrices()
 {
@@ -83,9 +86,9 @@ function resetPrices()
 
 function baseClick(){
     points += totalPointsPerClick
+    clicks = clicks + 1
     roundVals()
     document.getElementById("showPoints").innerHTML = points
-    clicks = clicks + 1
 }
 
 function upgradeX(num){
@@ -114,7 +117,6 @@ function prestige1(){
         resetPrices()
         document.getElementById("prestigeCost1").innerHTML = prestigeBonusCost1
         document.getElementById("showPoints").innerHTML = points
-        document.getElementById("showTotalClicks").innerHTML = clicks
 
         document.getElementById("numPrestigeMachines").innerHTML = prestigeMachines
         document.getElementById("currentPrestigeBoost").innerHTML = prestigeBonus1
